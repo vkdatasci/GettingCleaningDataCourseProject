@@ -64,10 +64,11 @@ analyzeData <- function(dataset) {
 }
 
 writeOut <- function(tidydata, outDir) {
+    setwd("../..")
     if (!file.exists(outDir)) { 
         dir.create(outDir)
     }
-    write.csv(tidydata, file.path(outDir,"tidy.txt"))
+    write.table(tidydata, file.path(outDir,"tidy.txt"), row.name=FALSE)
 }
 
 
