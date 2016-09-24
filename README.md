@@ -8,6 +8,10 @@ This repository contains a submission for the peer reviewed project for the "Get
 
 The project scope is the data analysis for the [Human Activity Recognition Using Smartphones dataset](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
+## Prerequisites
+
+To run the script, library `plyr` must be installed.
+
 ## Repository content
 
 1. `run_analsis.R` - R script for data download and analysis
