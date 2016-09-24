@@ -4,6 +4,7 @@ fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
 dataDir <- "data"
 dataZipFile <- file.path(dataDir, "ucidata.zip")
 workingDir <- file.path(dataDir, "UCI HAR Dataset")
+outDir <- "output"
 
 
 downloadFile <- function() {
@@ -62,16 +63,16 @@ analyzeData <- function(dataset) {
     meanAndStdAv
 }
 
-writeOut <- function(tidydata) {
-    if (!file.exists("output")) { 
-        dir.create("output")
+writeOut <- function(tidydata, outDir) {
+    if (!file.exists(outDir)) { 
+        dir.create(outDir)
     }
-    write.csv(tidydata, file.path("output","tidy.csv"))
+    write.csv(tidydata, file.path(outDir,"tidy.txt"))
 }
 
 
 getData()
 m <- mergeSets()
 tidydata <- analyzeData(m)
-writeOut(tidydata)
+writeOut(tidydata, outDir)
 
