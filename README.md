@@ -11,8 +11,8 @@ The project scope is the data analysis for the [Human Activity Recognition Using
 ## Repository content
 
 1. run_analsis.R - R script for data download and analysis
-2. README.md - instructions
-3. codebook.md - output data code book
+2. README.md - project description and running instructions
+3. codebook.md - resulting dataset format description
 
 ## Running instructions
 
